@@ -7,7 +7,7 @@ const signJwt = function (data) {
         expiresIn: 30, // 设置30秒token过期
     });
     const refreshToken = jwt.sign(data, refresh_secret, {
-        expiresIn: "7 days", // 设置1分钟token过期
+        expiresIn: "7 days",
     });
     return { token, refreshToken };
 };
